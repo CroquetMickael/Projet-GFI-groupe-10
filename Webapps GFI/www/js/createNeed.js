@@ -11,7 +11,12 @@ var jour    = currentDateLong.getDate();
 var currentDate = jour+"/"+mois+"/"+annee; 
 document.getElementById('currentDateString').innerHTML = currentDate;
 
-function hideThis(_div, status){
+function showThis(_div){
     var obj = document.getElementById(_div);
     obj.style.display = "block";
+}
+
+function hideThis(_div){
+    var obj = document.getElementById(_div);
+    obj.style.display = "none";    
 }

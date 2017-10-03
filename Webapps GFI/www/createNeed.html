@@ -65,7 +65,7 @@
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-            
+
         </header>
         <form class="form-horizontal col-sm-8">
             <div class="form-group ">
@@ -96,7 +96,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-8"> 
-                    <textarea rows="1" class="form-control" id="keySuccess" placeholder="Key Success Factor" onfocus="hideThis('hide')" ></textarea>
+                    <textarea rows="1" class="form-control" id="keySuccess" placeholder="Key Success Factor" onfocus="showThis('hide')" onblur="hideThis('hide')" ></textarea>
                 </div>
                 <div id="hide" style="display: none">
                     <div class="col-sm-8"> 
@@ -139,7 +139,21 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-8"> 
-                    <textarea rows="1" class="form-control" id="consultantsName" placeholder="Consultant Name"></textarea>
+                    <textarea rows="1" class="form-control" id="consultantsName" placeholder="Consultant Name" onfocus="showThis('hideConsultant')" onblur="hideThis('hideConsultant')"></textarea>
+                </div>
+                <div id="hideConsultant" style="display: none">
+                    <div class="col-sm-8"> 
+                        <textarea rows="1" class="form-control" id="consultantsName1" placeholder="Consultant Name"></textarea>
+                    </div>
+                    <div class="col-sm-8"> 
+                        <textarea rows="1" class="form-control" id="consultantsName2" placeholder="Consultant Name"></textarea>
+                    </div>
+                    <div class="col-sm-8"> 
+                        <textarea rows="1" class="form-control" id="consultantsName3" placeholder="Consultant Name"></textarea>
+                    </div>
+                    <div class="col-sm-8"> 
+                        <textarea rows="1" class="form-control" id="consultantsName4" placeholder="Consultant Name"></textarea>
+                    </div>
                 </div>
             </div>
             <div class="form-group"> 
