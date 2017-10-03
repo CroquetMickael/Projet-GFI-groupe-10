@@ -27,7 +27,7 @@ function onDeviceReady() {
 
 
 function onSuccess(position) {
-    
+   
     console.log(position );
     
 }
