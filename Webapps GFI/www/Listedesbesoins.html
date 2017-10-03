@@ -36,12 +36,7 @@
         <script type="text/javascript" src="js/stylejs/footable.js"></script>
         <script type="text/javascript" src="js/stylejs/mui.js"></script>
 
-        <script>
-
-            jQuery(function ($) {
-                $(".table").footable();
-            });
-        </script>
+        
 
         <title>SNAP-AT</title>
 
@@ -76,12 +71,14 @@
                 <div class="col-md-offset-2 col-md-8">
                     <div class="row">
                         <div class="col-md-offset-2 col-md-8 contenu">
-                            <table class="table" data-paging="true" data-paging-size="5" data-filtering="true">
+                            
+                            <table class="table" id="latable" data-paging="true" data-paging-size="5" data-filtering="true">
                                 <thead>
                                     <tr>
                                         <th>Client</th>
                                         <th>Titre</th>
                                         <th>Date</th>
+                                        <th>Status</th>
 
                                     </tr>
                                 </thead>
@@ -90,12 +87,14 @@
                                         <td>1</td>
                                         <td>Dennise</td>
                                         <td>Fuhrman</td>
+                                        <td>Disabled</td>
 
                                     </tr>
                                     <tr>
                                         <td>1</td>
                                         <td>Dennise</td>
                                         <td>Fuhrman</td>
+                                        <td>Suspended</td>
 
                                     </tr>
                                     <tr>
@@ -158,15 +157,34 @@
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="col-md-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
+        
+        
     </body>
 
+<footer class="col-md-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
+<script>
 
-
+            jQuery(function($){
+	$('.table').footable()
+        
+        $('[name=status]').on('change', function(){
+	var filtering = FooTable.get('.table').use(FooTable.Filtering); // get the filtering component for the table
+		console.log(filtering)
+        var filter = $(this).val(); // get the value to filter by
+	if (filter === 'none'){ // if the value is "none" remove the filter
+		filtering.removeFilter('status');
+	} else { // otherwise add/update the filter.
+		filtering.addFilter('status', filter, ['status']);
+	}
+	filtering.filter();
+});  
+    });
+    
+            
+        </script>
 </html>
