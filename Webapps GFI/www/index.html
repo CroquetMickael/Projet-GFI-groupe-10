@@ -33,56 +33,60 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="stylesheet" type="text/css" href="css/mui.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        
+
         <title>SNAP-AT</title>
     </head>
     <body>
         <header>
             <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-        <img style="" alt="logo-gfi" class="navbar-brand" src="img/logo.png" />
-    </div>
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <img style="" alt="logo-gfi" class="navbar-brand" src="img/logo.png" />
+                    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav></header>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav></header>
         <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-offset-2 col-md-8">
-                <div class="row">
-                    <h2>Bienvenue sur: SNAP-AT</h2>
-            <div class="mui-panel col-md-offset-1 col-md-10
-                 col-sm-offset-3 col-sm-6 contenu">
-                <h3>Identifiez vous</h3>
-                <form>
-                    <div class="mui-textfield mui-textfield--float-label">
-                  <input type="email" name="email" required>
-                <label style="text-align: right;">Email</label>
-                <br/>
-                <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary" value="Connexion" name="submit">Envoyer</button>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="row">
+                        <h2>Bienvenue sur: SNAP-AT</h2>
+                        <div class="mui-panel col-md-offset-1 col-md-10
+                             col-sm-offset-3 col-sm-6 contenu">
+                            <h3>Identifiez vous</h3>
+                             <form id="form_connect" name="form_connect" enctype="multipart/form-data" method="POST">
+                                <div class="mui-textfield mui-textfield--float-label">
+                                    <input type="email" name="email" id="email" required>
+                                    <label style="text-align: right;">Email</label>
+                                </div>    
+                                <div class="mui-textfield mui-textfield--float-label">    
+                                    <input type="password" name="mdp" id="password" required>
+                                    <label style="text-align: right;">Mot de Passe</label>
+                                    <br/>
+                                </div>    
+                                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary" value="Connexion" name="submit" id="Connexion">Envoyer</button>
+                               
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
-                    
-                </form>
-                
+
             </div>
-            </div>
-            </div>
-         
         </div>
-        </div>
-        
+
         <footer class="col-lg-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
     </body>
-        <script type="text/javascript" src="js/stylejs/jquery.min.js"></script>
-        <script type="text/javascript" src="js/stylejs/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/stylejs/mui.js"></script>
-         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/stylejs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/stylejs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/stylejs/mui.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </html>
