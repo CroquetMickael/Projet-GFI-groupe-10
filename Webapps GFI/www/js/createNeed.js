@@ -5,18 +5,34 @@
  */
 
 var currentDateLong = new Date(); //Récupération de la date courrante
-var annee   = currentDateLong.getFullYear(); 
-var mois    = currentDateLong.getMonth() + 1;
-var jour    = currentDateLong.getDate();
-var currentDate = jour+"/"+mois+"/"+annee; 
+var annee = currentDateLong.getFullYear();
+var mois = currentDateLong.getMonth() + 1;
+var jour = currentDateLong.getDate();
+var currentDate = jour + "/" + mois + "/" + annee;
 document.getElementById('currentDateString').innerHTML = currentDate;
 
-function showThis(_div){
+function showThis(_div) {
     var obj = document.getElementById(_div);
     obj.style.display = "block";
 }
 
-function hideThis(_div){
+function hideThis(_div) {
     var obj = document.getElementById(_div);
-    obj.style.display = "none";    
+    obj.style.display = "none";
 }
+
+function onDeviceReady() {
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+}
+
+
+function onSuccess(position) {
+    
+    console.log(position );
+    
+}
+
+function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
