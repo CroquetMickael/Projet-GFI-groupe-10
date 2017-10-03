@@ -5,3 +5,7 @@
  */
 
 
+function hideThis(_div, status){
+    var obj = document.getElementById(_div);
+    obj.style.display = "block";
+}
