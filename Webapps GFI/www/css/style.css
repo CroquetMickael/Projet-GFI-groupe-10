@@ -43,6 +43,7 @@ and open the template in the editor.
      background-color: black;
      color: white;
      opacity: 0.6;
+     width: 100%;
  }
  
  .contenu
