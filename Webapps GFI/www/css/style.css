@@ -12,7 +12,7 @@ and open the template in the editor.
 {
     background-color: #3E4B53;
     border-color: transparent;
-         line-height: 5em;
+    line-height: 5em;
     border: inactiveborder;
     width: 100%;
 }
@@ -36,19 +36,23 @@ and open the template in the editor.
 }
 
 .footer
- {
-     position: fixed ;
-     bottom: 0px;
-     width: 100%;
-     line-height: 3em;
-     background-color: black;
-     color: white;
-     opacity: 0.6;
-     width: 100%;
- }
- 
- .contenu
- {
-     margin-top: 10%;
- }
- 
+{
+    position: fixed ;
+    bottom: 0px;
+    width: 100%;
+    line-height: 3em;
+    background-color: black;
+    color: white;
+    opacity: 0.6;
+    width: 100%;
+}
+
+.contenu
+{
+    margin-top: 10%;
+}
+
+#inlineFormInput
+{
+    text-align: right;
+}

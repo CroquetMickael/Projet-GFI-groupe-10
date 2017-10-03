@@ -57,31 +57,32 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <div class="row">
-                        <h2>Bienvenue sur: SNAP-AT</h2>
+                        <h2>Bienvenue sur SNAP-AT</h2>
                         <div class="mui-panel col-md-offset-1 col-md-10
                              col-sm-offset-3 col-sm-6 contenu">
                             <h3>Identifiez vous</h3>
-                             <form id="form_connect" name="form_connect" enctype="multipart/form-data" method="POST">
-                                <div class="mui-textfield mui-textfield--float-label">
-                                    <input type="email" name="email" id="email" required>
-                                    <label style="text-align: right;">Email</label>
-                                </div>    
-                                <div class="mui-textfield mui-textfield--float-label">    
-                                    <input type="password" name="mdp" id="password" required>
-                                    <label style="text-align: right;">Mot de Passe</label>
+                            <form id="form_connect" name="form_connect" enctype="multipart/form-data" method="POST">
+                                <form class="form-inline">
                                     <br/>
-                                </div>    
+                                    <label for="inputEmail3" class="col-sm-0 col-form-label">Email :</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <input type="text" name="Email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="exemple">                                      
+                                        <div class="input-group-addon">@gfi.fr</div>
+                                    </div>
+                                    <br/>
+                                    <label for="inputPassword3" class="col-sm-0 col-form-label">Mot de Passe :</label>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="**********">
+                                        </div>
+                                    </div>
                                     <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary" value="Connexion" name="submit" id="Connexion">Envoyer</button>
-                               
-                            </form>
-
+                                </form>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <footer class="col-lg-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
     </body>
     <script type="text/javascript" src="js/stylejs/jquery.min.js"></script>
