@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+      
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -56,40 +56,44 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
-                    <div class="row">
-
-                        <h2>Bienvenue sur SNAP-AT</h2>
+                        <h2>Bienvenue sur: SNAP-AT</h2>
                         <div class="mui-panel col-md-offset-1 col-md-10
                              col-sm-offset-3 col-sm-6 contenu">
                             <h3>Identifiez vous</h3>
-                            <form id="form_connect" name="form_connect" enctype="multipart/form-data" method="POST">
-                                <form class="form-inline">
+                             <form id="form_connect" name="form_connect" enctype="multipart/form-data" method="POST">
+                                <div class="mui-textfield mui-textfield--float-label">
+                                    <input type="text" name="email" id="email" required>
+                                    <label style="text-align: right;">Email</label>
+                                </div>    
+                                <div class="mui-textfield mui-textfield--float-label">    
+                                    <input type="password" name="password" id="password" required>
+                                    <label style="text-align: right;">Mot de Passe</label>
                                     <br/>
-                                    <label for="inputEmail3" class="col-sm-0 col-form-label">Email :</label>
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <input type="text" name="Email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="exemple">                                      
-                                        <div class="input-group-addon">@gfi.fr</div>
-                                    </div>
-                                    <br/>
-                                    <label for="inputPassword3" class="col-sm-0 col-form-label">Mot de Passe :</label>
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="**********">
-                                        </div>
-                                    </div>
+                                </div>    
                                     <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary" value="Connexion" name="submit" id="Connexion">Envoyer</button>
-                                </form>
+                               
+                            </form>
+
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-
+                </div>
+            </div>
+        </div>
+>>>>>>> Squelette-Appli-(ancien)
         <footer class="col-lg-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
     </body>
     <script type="text/javascript" src="js/stylejs/jquery.min.js"></script>
     <script type="text/javascript" src="js/stylejs/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/stylejs/mui.js"></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="js/jsfonctionnel/connect_commercial.js"></script>
-  
+   
+=======
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+>>>>>>> Squelette-Appli-(ancien)
 </html>

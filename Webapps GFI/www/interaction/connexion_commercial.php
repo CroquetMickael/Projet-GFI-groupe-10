@@ -22,7 +22,7 @@ function compare_commercial($prmlogin, $prmpassword)
 {
     try
     {
-        $db = new PDO('mysql:host=localhost;dbname=snapat;', 'root', '');
+        $db = new PDO('mysql:host=http://localhost:3306;dbname=snapat;', 'root', '');
     }
 catch (PDOException $e)
     {
@@ -30,7 +30,7 @@ catch (PDOException $e)
     }
         $sql = 'SELECT * FROM commercial WHERE login = ? AND password =?';
         $preparesql = $db->prepare($sql);
-        $preparesql->execute($prmlogin, $prmpassword);
+        $preparesql->execute(array($prmlogin, $prmpassword));
         $donnes = $preparesql->fetch();
 
         return $donnes;
