@@ -9,7 +9,7 @@ try
 } catch (Exception $e) {
     die('Erreur : '.$e->getMessage());
 }
-
+//génération de la currentDate au bon pattern (YYYY-mm-dd)
 $date = new DateTime();
 $date->format('Y-m-d');
 
@@ -23,9 +23,9 @@ $durationFrequence = $_POST['durationFrequence'];
 $startAtTheLatest = $_POST['startAtTheLatest'];
 $location = $_POST['location'];
 $rate = $_POST['rate'];
-$statut = $_POST[];
-$idClient = $_POST[];
-$idCommercial = $_POST[];
+$statut = $_POST['statut'];
+$idClient = 1;
+$idCommercial = 1;
 
 
         
