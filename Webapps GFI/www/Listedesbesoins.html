@@ -28,15 +28,16 @@
 
         <link rel="stylesheet" type="text/css" href="css/mui.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/footable.bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script type="text/javascript" src="js/stylejs/jquery.min.js"></script>
         <script type="text/javascript" src="js/stylejs/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/stylejs/footable.js"></script>
         <script type="text/javascript" src="js/stylejs/mui.js"></script>
+        <script type="text/javascript" src="js/jsfonctionnel/recup_besoin.js"></script>
 
-        
+
 
         <title>SNAP-AT</title>
 
@@ -71,7 +72,7 @@
                 <div class="col-md-offset-2 col-md-8">
                     <div class="row">
                         <div class="col-md-offset-2 col-md-8 contenu">
-                            
+
                             <table class="table" id="latable" data-paging="true" data-paging-size="5" data-filtering="true">
                                 <thead>
                                     <tr>
@@ -83,108 +84,57 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tableau_besoin">
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-                                        <td>Disabled</td>
 
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-                                        <td>Suspended</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dennise</td>
-                                        <td>Fuhrman</td>
-
-                                    </tr>
 
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                   
+                </div>
+                
+            </div>
+            <div class="row">
+         <div class="col-xs-offset-9 col-xs-2 float-right">
+            <a href="createNeed.html"> <button class="mui-btn mui-btn--fab mui-btn--primary">+</button></a>
+         </div>
+        </div>
+            
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
                 </div>
             </div>
         </div>
-
-        
         
     </body>
-
-<footer class="col-md-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
-<script>
-
-            jQuery(function($){
-	$('.table').footable()
-        
-        $('[name=status]').on('change', function(){
-	var filtering = FooTable.get('.table').use(FooTable.Filtering); // get the filtering component for the table
-		console.log(filtering)
-        var filter = $(this).val(); // get the value to filter by
-	if (filter === 'none'){ // if the value is "none" remove the filter
-		filtering.removeFilter('status');
-	} else { // otherwise add/update the filter.
-		filtering.addFilter('status', filter, ['status']);
-	}
-	filtering.filter();
-});  
-    });
     
+    <footer class="col-md-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
+    <script>
+        
             
-        </script>
+        
+        jQuery(function ($) {
+            $('.table').footable();
+        });
+       
+            $(".clickable-row").click(function() {
+                console.log("ça clique");
+            });
+
+
+
+    </script>
 </html>
