@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.ajax({
-        url: "interaction/recuperation_besoin.php",
+        url: "https://snapat.000webhostapp.com/interaction/recuperation_besoin.php",
         type: "GET",
         dataType: 'json',
         success: function (data) {
@@ -13,13 +13,14 @@ $(document).ready(function () {
                             + '<td>' + val.title + '</td>'
                             + '<td>' + val.dateCreation + '</td>'
                             + '<td>' + val.name + '</td>'
-                            + '<td>' + val.status + '</td>'
+                            + '<td>' + val.statut + '</td>'
                          + '</tr>');
+                 document.getElementById('location').innerHTML(val)
             }
 
             },
                 error: function (e) {
-
+                    
                 }
     });
 });
