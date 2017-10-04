@@ -19,8 +19,6 @@
 -->
 <html>
     <head>
-
-
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -36,6 +34,7 @@
         <script type="text/javascript" src="js/stylejs/footable.js"></script>
         <script type="text/javascript" src="js/stylejs/mui.js"></script>
         <script type="text/javascript" src="js/jsfonctionnel/recup_besoin.js"></script>
+        <script type="text/javascript" src="js/listeBesoins.js"></script>
 
 
 
@@ -60,8 +59,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">Link</a></li>
+                            <li><a href="index.html">Deconnexion</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -79,7 +77,7 @@
                                         <th>Client</th>
                                         <th>Titre</th>
                                         <th>Date</th>
-                                        <th>Status</th>
+                                        <th>Statut</th>
 
                                     </tr>
                                 </thead>
@@ -90,16 +88,18 @@
                             </table>
                         </div>
                     </div>
-                   
+
                 </div>
-                
+
+            </div>
+            <div id="test">
             </div>
             <div class="row">
-         <div class="col-xs-offset-9 col-xs-2 float-right">
-            <a href="createNeed.html"> <button class="mui-btn mui-btn--fab mui-btn--primary">+</button></a>
-         </div>
-        </div>
-            
+                <div class="col-xs-offset-9 col-xs-2 float-right">
+                    <a href="createNeed.html"> <button class="mui-btn mui-btn--fab mui-btn--primary glyphicon glyphicon-plus"></button></a>
+                </div>
+            </div>
+
         </div>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -118,23 +118,8 @@
                 </div>
             </div>
         </div>
-        
+
     </body>
-    
+
     <footer class="col-md-12 text-center footer">©GFI 2017. Tous droits réservés.</footer>
-    <script>
-        
-            
-        
-        jQuery(function ($) {
-            $('.table').footable();
-        });
-       
-            $(".clickable-row").click(function() {
-                console.log("ça clique");
-            });
-
-
-
-    </script>
 </html>
