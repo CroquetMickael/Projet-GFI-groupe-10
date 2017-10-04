@@ -1,4 +1,4 @@
-//Requete insertion table Besoin, il faut aupréalable récupérer idClient, idCOmmercial) : 
+﻿//Requete insertion table Besoin, il faut aupréalable récupérer idClient, idCOmmercial) : 
 
 INSERT INTO besoin (title, contactName, dateCreation, fullDescription, duration, durantionFrequence, startAtTheLatest, location, rate, status, 
 id_client, id_commercial) VALUES (varTitle, varDate, varDescription, varDuration, varDurationFrequence, var startAtTheLatest, varLocation, varRate, varStatus,
@@ -13,3 +13,29 @@ SELECT id FROM commercial WHERE login = "varLogin";
 
 Requete récupération de tout les nom de besoin
 SELECT title FROM besoin;
+
+
+Requete selection table besoin :
+1 - WIN
+
+select bsn.title, bsn.dateCreation,clt.name, bsn.statut
+from besoin as bsn
+INNER JOIN client as clt
+on clt.id = bsn.id_client
+WHERE bsn.statut = 'win'
+
+2 - LOST
+
+select bsn.title, bsn.dateCreation,clt.name, bsn.statut
+from besoin as bsn
+INNER JOIN client as clt
+on clt.id = bsn.id_client
+WHERE bsn.statut = 'lost'
+
+3 - OPEN
+
+select bsn.title, bsn.dateCreation,clt.name, bsn.statut
+from besoin as bsn
+INNER JOIN client as clt
+on clt.id = bsn.id_client
+WHERE bsn.statut = 'open'

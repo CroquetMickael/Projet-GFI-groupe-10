@@ -36,3 +36,11 @@ function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
+    
+    
+function getfile(){
+        document.getElementById('hiddenfile').click();
+    }
+function getvalue(){
+        document.getElementById('selectedfile').value=document.getElementById('hiddenfile').value;
+    }

@@ -38,7 +38,7 @@
         <link rel="stylesheet" type="text/css" href="css/mui.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
+        
         <title>SNAP-AT</title>
     </head>
     <body>
@@ -66,7 +66,7 @@
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
-        <form class="form-horizontal col-sm-8">
+        <form class="form-horizontal col-sm-8" method="post" action="page.php" enctype="multipart/form-data">
             <div class="form-group ">
                 <div class="col-sm-8">                   
                     <label class="control-label" id="date">Date du jour : </label> 
@@ -133,8 +133,14 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-8"> 
-                    <label class="control-label col-sm-2" >Ajouter un fichier</label>
-                    <input type="file" class="form-control" id="file" placeholder="file">
+                    
+                        <input type="file" id="hiddenfile" style="display:none" name="file" onChange="getvalue();"/>
+                        <input type="text" id="selectedfile" value="Choisissez un fichier"/>
+                        <input type="button" value="Select a file" onclick="getfile();"/>
+
+                    
+                    
+           
                 </div>
             </div>
             <div class="form-group">
