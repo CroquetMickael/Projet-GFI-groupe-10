@@ -30,7 +30,7 @@ catch (PDOException $e)
     }
         $sql = 'SELECT * FROM commercial WHERE login = ? AND password =?';
         $preparesql = $db->prepare($sql);
-        $preparesql->execute($prmlogin, $prmpassword);
+        $preparesql->execute(array($prmlogin, $prmpassword));
         $donnes = $preparesql->fetch();
 
         return $donnes;
