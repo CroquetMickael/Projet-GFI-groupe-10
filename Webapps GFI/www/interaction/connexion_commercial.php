@@ -22,7 +22,7 @@ function compare_commercial($prmlogin, $prmpassword)
 {
     try
     {
-        $db = new PDO('mysql:host=localhost;dbname=snapat;', 'root', '');
+        $db = new PDO('mysql:host=localhost;dbname=id3137637_snapat;', 'id3137637_admingfi', 'adminadmin');
     }
 catch (PDOException $e)
     {

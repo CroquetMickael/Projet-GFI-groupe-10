@@ -5,7 +5,7 @@
 //Connexion à la Bdd
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+     $bdd = new PDO('mysql:host=localhost;dbname=id3137637_snapat;', 'id3137637_admingfi', 'adminadmin');
 } catch (Exception $e) {
     die('Erreur : '.$e->getMessage());
 }

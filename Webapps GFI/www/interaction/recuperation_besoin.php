@@ -7,7 +7,7 @@ echo $jsonresult;
 //Fonction de récupération des besoins 
 function recup_besoin() {
     try {
-        $db = new PDO('mysql:host=localhost;dbname=snapat;', 'root', '');
+         $db = new PDO('mysql:host=localhost;dbname=id3137637_snapat;', 'id3137637_admingfi', 'adminadmin');
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
