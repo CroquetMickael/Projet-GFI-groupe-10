@@ -14,7 +14,7 @@ $date = new DateTime();
 $date->format('Y-m-d');
 
 //Récupération des valeurs entrée dans les text_input coté html.
-$title = $_POST[];
+$title = $_POST['title'];
 $contactName = $_POST['contactName'];
 $dateCreation = $date;
 $fullDescription = $_POST['description'];
