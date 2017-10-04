@@ -27,12 +27,31 @@ function onDeviceReady() {
 
 
 function onSuccess(position) {
-   
-    console.log(position );
+    var text = document.getElementById('location');
+    text.value="";
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    
+    var reverseGeocoder = new google.maps.Geocoder();
+    var currentPosition = new google.maps.LatLng(latitude, longitude);
+    reverseGeocoder.geocode({'latLng': currentPosition}, function(results, status) {
+ 
+            if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                    text.value+= results[0].formatted_address ;
+                    }
+            else {
+                    console.log('Unable to detect your address.');
+                    }
+        } else {
+            console.log('Unable to detect your address.');
+        }
+    });
     
 }
 
 function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
+    alert('code: ' + error.code + '\n' +
+            'message: ' + error.message + '\n');
+}
+
